@@ -1,0 +1,14 @@
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\bin\Debug\WpfApp5.exe.config
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\bin\Debug\WpfApp5.exe
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\bin\Debug\WpfApp5.pdb
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csprojResolveAssemblyReference.cache
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\MainWindow.g.cs
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\App.g.cs
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.cache
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5_MarkupCompile.lref
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\MainWindow.baml
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5.g.resources
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5.Properties.Resources.resources
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5.csproj.GenerateResource.Cache
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5.exe
+c:\users\michu\documents\visual studio 2017\Projects\WpfApp5\WpfApp5\obj\Debug\WpfApp5.pdb
