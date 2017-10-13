@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,85 +25,45 @@ namespace WpfApp5
         public int pastrow = -1, pastcolumn = -1, afterRow = -1, aftercolumn = -1;
 
         Random z = new Random();
-        public string randomSign()
+        
+        public char randomSign()
         {
             int randomNumber;
-            string sign = " ";
+            char sign= ' ';
+            char[] tabsign;
+            tabsign = new char[7];
+            tabsign[0] = '!';
+            tabsign[1] = 'X';
+            tabsign[2] = '#';
+            tabsign[3] = '$';
+            tabsign[4] = '%';
+            tabsign[5] = '?';
+            tabsign[6] = '@';
 
-            randomNumber = z.Next(1, 8);
-            switch (randomNumber)
-            {
-                case 1: sign = "!"; break;
-                case 2: sign = "X"; break;
-                case 3: sign = "#"; break;
-                case 4: sign = "$"; break;
-                case 5: sign = "%"; break;
-                case 6: sign = "&"; break;
-                case 7: sign = "?"; break;
-                case 8: sign = "@"; break;
-            }
+            randomNumber = z.Next(0,7);
+            sign = tabsign[randomNumber];
+
             return sign;
         }
-        public void fillBoardSigns()     
+        
+        public void fillBoardSigns()
         {
             int randomNumber;
+            List<Button> buttons = Grid.Children.Cast<Button>().ToList();
+
             for (int k = 0; k < 1; k++)
             {
                 randomNumber = z.Next(1, 50);
-                switch (randomNumber)
+                if (buttons[randomNumber].Content.ToString() != " ")
                 {
-                    case 1: if (button1.Content.ToString() != " ") { k--; continue; } button1.Content = randomSign(); break;
-                    case 2: if (button2.Content.ToString() != " ") { k--; continue; } button2.Content = randomSign(); break;
-                    case 3: if (button3.Content.ToString() != " ") { k--; continue; } button3.Content = randomSign(); break;
-                    case 4: if (button4.Content.ToString() != " ") { k--; continue; } button4.Content = randomSign(); break;
-                    case 5: if (button5.Content.ToString() != " ") { k--; continue; } button5.Content = randomSign(); break;
-                    case 6: if (button6.Content.ToString() != " ") { k--; continue; } button6.Content = randomSign(); break;
-                    case 7: if (button7.Content.ToString() != " ") { k--; continue; } button7.Content = randomSign(); break;
-                    case 8: if (button8.Content.ToString() != " ") { k--; continue; } button8.Content = randomSign(); break;
-                    case 9: if (button9.Content.ToString() != " ") { k--; continue; } button9.Content = randomSign(); break;
-                    case 10: if (button10.Content.ToString() != " ") { k--; continue; } button10.Content = randomSign(); break;
-                    case 11: if (button11.Content.ToString() != " ") { k--; continue; } button11.Content = randomSign(); break;
-                    case 12: if (button12.Content.ToString() != " ") { k--; continue; } button12.Content = randomSign(); break;
-                    case 13: if (button13.Content.ToString() != " ") { k--; continue; } button13.Content = randomSign(); break;
-                    case 14: if (button14.Content.ToString() != " ") { k--; continue; } button14.Content = randomSign(); break;
-                    case 15: if (button15.Content.ToString() != " ") { k--; continue; } button15.Content = randomSign(); break;
-                    case 16: if (button16.Content.ToString() != " ") { k--; continue; } button16.Content = randomSign(); break;
-                    case 17: if (button17.Content.ToString() != " ") { k--; continue; } button17.Content = randomSign(); break;
-                    case 18: if (button18.Content.ToString() != " ") { k--; continue; } button18.Content = randomSign(); break;
-                    case 19: if (button19.Content.ToString() != " ") { k--; continue; } button19.Content = randomSign(); break;
-                    case 20: if (button20.Content.ToString() != " ") { k--; continue; } button20.Content = randomSign(); break;
-                    case 21: if (button21.Content.ToString() != " ") { k--; continue; } button21.Content = randomSign(); break;
-                    case 22: if (button22.Content.ToString() != " ") { k--; continue; } button22.Content = randomSign(); break;
-                    case 23: if (button23.Content.ToString() != " ") { k--; continue; } button23.Content = randomSign(); break;
-                    case 24: if (button24.Content.ToString() != " ") { k--; continue; } button24.Content = randomSign(); break;
-                    case 25: if (button25.Content.ToString() != " ") { k--; continue; } button25.Content = randomSign(); break;
-                    case 26: if (button26.Content.ToString() != " ") { k--; continue; } button26.Content = randomSign(); break;
-                    case 27: if (button27.Content.ToString() != " ") { k--; continue; } button27.Content = randomSign(); break;
-                    case 28: if (button28.Content.ToString() != " ") { k--; continue; } button28.Content = randomSign(); break;
-                    case 29: if (button29.Content.ToString() != " ") { k--; continue; } button29.Content = randomSign(); break;
-                    case 30: if (button30.Content.ToString() != " ") { k--; continue; } button30.Content = randomSign(); break;
-                    case 31: if (button31.Content.ToString() != " ") { k--; continue; } button31.Content = randomSign(); break;
-                    case 32: if (button32.Content.ToString() != " ") { k--; continue; } button32.Content = randomSign(); break;
-                    case 33: if (button33.Content.ToString() != " ") { k--; continue; } button33.Content = randomSign(); break;
-                    case 34: if (button34.Content.ToString() != " ") { k--; continue; } button34.Content = randomSign(); break;
-                    case 35: if (button35.Content.ToString() != " ") { k--; continue; } button35.Content = randomSign(); break;
-                    case 36: if (button36.Content.ToString() != " ") { k--; continue; } button36.Content = randomSign(); break;
-                    case 37: if (button37.Content.ToString() != " ") { k--; continue; } button37.Content = randomSign(); break;
-                    case 38: if (button38.Content.ToString() != " ") { k--; continue; } button38.Content = randomSign(); break;
-                    case 39: if (button39.Content.ToString() != " ") { k--; continue; } button39.Content = randomSign(); break;
-                    case 40: if (button40.Content.ToString() != " ") { k--; continue; } button40.Content = randomSign(); break;
-                    case 41: if (button41.Content.ToString() != " ") { k--; continue; } button41.Content = randomSign(); break;
-                    case 42: if (button42.Content.ToString() != " ") { k--; continue; } button42.Content = randomSign(); break;
-                    case 43: if (button43.Content.ToString() != " ") { k--; continue; } button43.Content = randomSign(); break;
-                    case 44: if (button44.Content.ToString() != " ") { k--; continue; } button44.Content = randomSign(); break;
-                    case 45: if (button45.Content.ToString() != " ") { k--; continue; } button45.Content = randomSign(); break;
-                    case 46: if (button46.Content.ToString() != " ") { k--; continue; } button46.Content = randomSign(); break;
-                    case 47: if (button47.Content.ToString() != " ") { k--; continue; } button47.Content = randomSign(); break;
-                    case 48: if (button48.Content.ToString() != " ") { k--; continue; } button48.Content = randomSign(); break;
-                    case 49: if (button49.Content.ToString() != " ") { k--; continue; } button49.Content = randomSign(); break;
+                    k--;
+                    continue;
                 }
+                buttons[randomNumber].Content = randomSign().ToString();
+                break;
             }
         }
+
 
         public MainWindow()
         {
@@ -130,7 +90,7 @@ namespace WpfApp5
                 fillBoardSigns();
             }
         }
- 
+
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
@@ -140,12 +100,12 @@ namespace WpfApp5
 
             RewritingToTable(table);
             int column = Grid.GetColumn(button);
-            int row = Grid.GetRow(button)-1;
+            int row = Grid.GetRow(button) - 1;
             //Performing a shift for signs
             if (movesCounter == 0 && table[row, column] != " ")
             {
                 buf = table[row, column];
-                bufrow =row;
+                bufrow = row;
                 bufcolumn = column;
                 CheckMovement(row, column, table);
                 movesCounter = 1;
@@ -182,7 +142,6 @@ namespace WpfApp5
                 AddSigns();
                 ChceckLose();
                 AddSigns();
-
             }
             ChceckLose();
         }
@@ -222,17 +181,17 @@ namespace WpfApp5
             RewritingToTable(table);
             // Check sign in table in pose horizontally 
             int countRightMovementHorizontally = 1; int buforForHorizontally = 0;
-            for(int i=0; i<7; i++)
+            for (int i = 0; i < 7; i++)
             {
-                for(int j=0; j<7; j++)
+                for (int j = 0; j < 7; j++)
                 {
-                    for (int k=1; k<7-j; k++)
+                    for (int k = 1; k < 7 - j; k++)
                     {
                         buforForHorizontally = k;
-                        if (table[i, j] != " " && table[i, j] == table[i, j + k] )
+                        if (table[i, j] != " " && table[i, j] == table[i, j + k])
                         {
                             countRightMovementHorizontally++;
-                        }   
+                        }
                         else if (table[i, j] != " " && table[i, j] != table[i, j + k])
                         {
                             if (countRightMovementHorizontally >= 3)
@@ -241,7 +200,7 @@ namespace WpfApp5
                                 {
                                     table[i, j + k - t] = " ";
                                     score = score + 10;
-                                }        
+                                }
                             }
                             countRightMovementHorizontally = 1;
                             break;
@@ -260,16 +219,16 @@ namespace WpfApp5
             }
             // Check sign in table in pose vertical
             int countRightMovementVertical = 1; int buforForVertical = 0;
-            for (int j = 0; j < 7; j++) 
+            for (int j = 0; j < 7; j++)
             {
                 for (int i = 0; i < 7; i++)
                 {
                     for (int k = 1; k < 7 - i; k++)
                     {
                         buforForVertical = k;
-                        if (table[i, j] != " " && table[i, j] == table[i+k, j])
+                        if (table[i, j] != " " && table[i, j] == table[i + k, j])
                             countRightMovementVertical++;
-                        else if (table[i, j] != " " && table[i, j] != table[i+k, j])
+                        else if (table[i, j] != " " && table[i, j] != table[i + k, j])
                         {
                             if (countRightMovementVertical >= 3)
                             {
@@ -277,7 +236,7 @@ namespace WpfApp5
                                 {
                                     table[i + k - t, j] = " ";
                                     score = score + 10;
-                                }   
+                                }
                             }
                             countRightMovementVertical = 1;
                             break;
@@ -304,14 +263,14 @@ namespace WpfApp5
 
         public bool CheckMovement(int x, int y, string[,] table)
         {
-            bool  check=true;
-            
-            if(movesCounter == 0)
+            bool check = true;
+
+            if (movesCounter == 0)
             {
                 pastrow = x;
                 pastcolumn = y;
             }
-            else if(movesCounter == 1)
+            else if (movesCounter == 1)
             {
                 afterRow = x;
                 aftercolumn = y;
@@ -367,8 +326,8 @@ namespace WpfApp5
                         }
                     }
                 }
-               else
-                check = false;   
+                else
+                    check = false;
             }
             return check;
         }
@@ -387,12 +346,12 @@ namespace WpfApp5
             int count = 0;
             for (int i = 0; i < 47; i++)
             {
-                if(buttons[i].Content.ToString()!=" ")
+                if (buttons[i].Content.ToString() != " ")
                 {
                     count++;
                 }
             }
-            if(count == 47)
+            if (count == 47)
             {
                 FinishTheGame();
             }
@@ -430,4 +389,5 @@ namespace WpfApp5
             MessageBox.Show(creators);
         }
     }
- }
+}
+ 
