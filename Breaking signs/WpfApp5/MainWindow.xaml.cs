@@ -30,16 +30,7 @@ namespace WpfApp5
         {
             int randomNumber;
             char sign= ' ';
-            char[] tabsign;
-            tabsign = new char[7];
-            tabsign[0] = '!';
-            tabsign[1] = 'X';
-            tabsign[2] = '#';
-            tabsign[3] = '$';
-            tabsign[4] = '%';
-            tabsign[5] = '?';
-            tabsign[6] = '@';
-
+            char[] tabsign= { '!','X','#','$','%','?','@' };
             randomNumber = z.Next(0,7);
             sign = tabsign[randomNumber];
 
